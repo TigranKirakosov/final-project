@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import routesConstants from 'State/routing/routes.constants';
+import routesConstants from 'State/routing/routing.constants.ts';
 import imgSrc from '../../../assets/images/Pokedex_logo.png';
 import './navbar.styles.scss';
 

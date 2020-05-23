@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import routesConstants from 'State/routing/routes.constants';
+import routesConstants from 'State/routing/routing.constants.ts';
 import { capitalizeWord } from 'Common/utils/utilities';
 import CustomButton from 'Common/components/custom-button/custom-button.component';
 
