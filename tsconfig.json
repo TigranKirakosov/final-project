@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "moduleResolution": "node",
+        "outDir": "./dist/",
+        "sourceMap": true,
+        "noImplicitAny": false,
+        "module": "es6",
+        "target": "es5",
+        "jsx": "react",
+        "allowJs": true,
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop" : true,
+        "baseUrl": "./",
+        "paths": {
+            "App/*": ["src/app/*"],
+            "Api/*": ["src/app/api/*"],
+            "State/*": ["src/app/state/*"],
+            "View/*": ["src/app/view/*"],
+            "Common/*": ["src/common/*"],
+            "Sass/*": ["src/sass/*"]
+        }
+    },
+    "exclude": ["node_modules"]
+}

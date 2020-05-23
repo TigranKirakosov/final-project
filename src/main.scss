@@ -25,7 +25,7 @@
     url('./assets/fonts/Blinker-Light/Blinker-Light.ttf') format('truetype');
 }
 
-@import './sass/utils/mixins';
-@import './sass/utils/variables';
-@import './App';
-@import './sass/base/base';
+@import '~Sass/utils/mixins';
+@import '~Sass/utils/variables';
+@import 'App/App';
+@import '~Sass/base/base';
