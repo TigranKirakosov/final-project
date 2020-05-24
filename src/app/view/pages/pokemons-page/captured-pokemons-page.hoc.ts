@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchCapturedPokemonsStart } from 'State/redux/pokemons/pokemons.actions';
+import { fetchCapturedPokemonsStart } from 'App/state/redux/pokemons/pokemons.actions';
 import PokemonsPage from './pokemons-page.component';
 
 const mapStateToProps = ({

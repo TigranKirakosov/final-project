@@ -46,7 +46,7 @@ const SignIn = ({ googleSignInStart, emailSignInStart }) => {
           required
         />
         <div className='buttons-wrapper'>
-          <CustomButton type='submit'>Sign In</CustomButton>
+          <CustomButton type='submit' additionalClass={null}>Sign In</CustomButton>
           <CustomButton
             type='button'
             additionalClass='google-sign-in'

@@ -5,7 +5,7 @@ import Navbar from 'Common/components/navbar/navbar.hoc';
 import './App.scss';
 import { Props } from './App.hoc';
 import { RenderRoutes } from 'State/routing/routing.components';
-import ROUTES from 'State/routing/routing.model';
+import ROUTES from 'App/state/routing/routing.config';
 
 const App: React.FC<Props> = ({ checkUserSession }) => {
   useEffect(() => {

@@ -63,6 +63,7 @@ const Pokemon = ({
                 .join(' ')
             })
           }
+          additionalClass={null}
         >
           Catch
         </CustomButton>
@@ -80,6 +81,7 @@ const Pokemon = ({
               captureDate: 'none'
             })
           }
+          additionalClass={null}
         >
           Set Free
         </CustomButton>

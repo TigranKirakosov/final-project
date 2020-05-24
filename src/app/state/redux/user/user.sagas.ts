@@ -5,13 +5,11 @@ import {
   googleProvider,
   createUserProfileDocument
 } from 'Api/firebase/firebase.utils';
-import { signInSuccess, signInFailure } from 'State/redux/user/user.actions';
-
-import actionTypes from 'State/redux/user/user.action-types';
+import { signInSuccess, signInFailure, emailSignInStart, checkUserSession, googleSignInStart } from 'State/redux/user/user.actions';
 
 export function* getSnapshotFromUserAuth(userAuth) {
   try {
-    const userRef = yield call(createUserProfileDocument, userAuth);
+    const userRef = yield call(createUserProfileDocument as any, userAuth);
     const userSnapshot = yield userRef.get();
     yield put(signInSuccess({ ...userSnapshot.data(), id: userSnapshot.id }));
   } catch (error) {
@@ -29,7 +27,7 @@ export function* signInWithGoogle() {
 }
 
 export function* onGoogleSignInStart() {
-  yield takeLatest(actionTypes.GOOGLE_SIGN_IN_START, signInWithGoogle);
+  yield takeLatest(googleSignInStart, signInWithGoogle);
 }
 
 export function* signInWithEmail({ payload: { email, password } }) {
@@ -42,7 +40,7 @@ export function* signInWithEmail({ payload: { email, password } }) {
 }
 
 export function* onEmailSignInStart() {
-  yield takeLatest(actionTypes.EMAIL_SIGN_IN_START, signInWithEmail);
+  yield takeLatest(emailSignInStart, signInWithEmail);
 }
 
 export function* isUserAuthenticated() {
@@ -56,7 +54,7 @@ export function* isUserAuthenticated() {
 }
 
 export function* onCheckUserSession() {
-  yield takeLatest(actionTypes.CHECK_USER_SESSION, isUserAuthenticated);
+  yield takeLatest(checkUserSession, isUserAuthenticated);
 }
 
 export function* userSagas() {

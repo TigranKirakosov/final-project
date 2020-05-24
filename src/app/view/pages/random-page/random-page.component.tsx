@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { capitalizeWord } from 'Common/utils/utilities';
 import './random-page.styles.scss';
 
-class RandomPage extends React.Component {
+class RandomPage extends React.Component<any, any> {
   static propTypes = {
     fetchRandomPokemonAsync: PropTypes.func.isRequired,
     pokemon: PropTypes.object.isRequired,

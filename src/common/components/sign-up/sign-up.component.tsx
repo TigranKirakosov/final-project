@@ -59,6 +59,7 @@ const SignUp = () => {
           value={displayName}
           onChange={handleChange}
           label='Display Name'
+          handleInputChange={() => null}
           required
         />
         <FormInput
@@ -67,6 +68,7 @@ const SignUp = () => {
           value={email}
           onChange={handleChange}
           label='Email'
+          handleInputChange={() => null}
           required
         />
         <FormInput
@@ -75,6 +77,7 @@ const SignUp = () => {
           value={password}
           onChange={handleChange}
           label='Password'
+          handleInputChange={() => null}
           required
         />
         <FormInput
@@ -83,9 +86,10 @@ const SignUp = () => {
           value={confirmPassword}
           onChange={handleChange}
           label='Confirm Password'
+          handleInputChange={() => null}
           required
         />
-        <CustomButton type='submit'>SIGN UP</CustomButton>
+        <CustomButton type='submit' additionalClass={null}>SIGN UP</CustomButton>
       </form>
     </div>
   );

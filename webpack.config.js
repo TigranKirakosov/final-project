@@ -13,23 +13,20 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/,
+        test: /\.tsx?$/,
         use: 'ts-loader',
-        exclude: /node_modules/,
-        resolve: {
-          extensions: ['.tsx', '.ts']
-        }
+        exclude: /node_modules/
       },
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_module/,
-        resolve: {
-          extensions: ['.jsx', '.js']
-        },
-        use: {
-          loader: 'babel-loader'
-        }
-      },
+      // {
+      //   test: /\.(js|jsx)$/,
+      //   exclude: /node_module/,
+      //   resolve: {
+      //     extensions: ['.jsx', '.js']
+      //   },
+      //   use: {
+      //     loader: 'babel-loader'
+      //   }
+      // },
       {
         test: /\.s?css/,
         resolve: {
@@ -60,7 +57,7 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js', '.jsx'],
+    extensions: ['.tsx', '.ts', '.js'],
     alias: {
       App: path.resolve(__dirname, 'src/app'),
       State: path.resolve(__dirname, 'src/app/state'),

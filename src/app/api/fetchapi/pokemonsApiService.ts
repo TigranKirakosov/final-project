@@ -13,7 +13,7 @@ const pokemonsApiService = {
         await apiRequests.delete(`${restApiLinks.freePokemons}/${pokemon.id}`);
         return data;
       } else {
-        throw new Error(response);
+        throw new Error(response as any);
       }
     } catch (err) {
       throw err;
@@ -32,7 +32,7 @@ const pokemonsApiService = {
         );
         return data;
       } else {
-        throw new Error(response);
+        throw new Error(response as any);
       }
     } catch (err) {
       throw err;

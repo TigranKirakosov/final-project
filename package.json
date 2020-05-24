@@ -4,7 +4,7 @@
   "description": "EPAM's JavaScript development course final project",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --mode development --open --hot",
+    "start": "webpack-dev-server --progress --mode development --open --hot --resolveJsonModule",
     "build": "rimraf ./dist && webpack --progress --mode production",
     "deploy": "gh-pages -d dist"
   },

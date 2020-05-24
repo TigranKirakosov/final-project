@@ -6,6 +6,7 @@ import CapturedPokemonsPageHOC from 'App/view/pages/pokemons-page/captured-pokem
 import RandomPokemonPageHOC from 'App/view/pages/random-page/random-page.hoc';
 import SignInAndSignUpPage from 'App/view/pages/sign-in-and-sign-up-page/sign-in-and-sign-up-page.component';
 import routesConstants from './routing.constants';
+
 const {
   HOMEPAGE,
   POKEMON_PAGE,

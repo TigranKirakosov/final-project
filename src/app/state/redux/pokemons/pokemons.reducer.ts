@@ -1,4 +1,4 @@
-import actionTypes from 'State/redux/pokemons/pokemons.action-types';
+import actionTypes from 'App/state/redux/pokemons/pokemons.action-types';
 
 const INITIAL_STATE = {
   freePokemons: [],
