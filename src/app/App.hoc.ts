@@ -3,7 +3,7 @@ import Redux from 'redux';
 import App from './App';
 
 import { checkUserSession } from 'State/redux/user/user.actions';
-import { RootState } from 'State/redux/root-reducer';
+import { RootState } from 'State/redux/store';
 
 interface OwnProps {}
 

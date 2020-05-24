@@ -31,24 +31,28 @@ const ROUTES: RouteConfig[] = [
           path: `${POKEMON_PAGE}/:id`,
           key: 'SINGLE_POKEMON_PAGE',
           exact: true,
+          isProtected: true,
           component: PokemonPage,
         },
         {
           path: FREE_POKEMONS_PAGE,
           key: 'FREE_POKEMONS_PAGE',
           exact: true,
+          isProtected: true,
           component: FreePokemonsPageHOC,
         },
         {
           path: CAPTURED_POKEMONS_PAGE,
           key: 'CAPTURED_POKEMONS_PAGE',
           exact: true,
+          isProtected: true,
           component: CapturedPokemonsPageHOC,
         },
         {
           path: RANDOM_POKEMON_PAGE,
           key: 'RANDOM_POKEMON_PAGE',
           exact: true,
+          isProtected: true,
           component: RandomPokemonPageHOC,
         },
         {

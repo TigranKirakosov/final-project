@@ -7,5 +7,3 @@ export const rootReducer = combineReducers({
   pokemons: pokemonsReducer,
   user: userReducer
 });
-
-export type RootState = ReturnType<typeof rootReducer>;
