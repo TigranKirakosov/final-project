@@ -17,16 +17,6 @@ module.exports = {
         use: 'ts-loader',
         exclude: /node_modules/
       },
-      // {
-      //   test: /\.(js|jsx)$/,
-      //   exclude: /node_module/,
-      //   resolve: {
-      //     extensions: ['.jsx', '.js']
-      //   },
-      //   use: {
-      //     loader: 'babel-loader'
-      //   }
-      // },
       {
         test: /\.s?css/,
         resolve: {

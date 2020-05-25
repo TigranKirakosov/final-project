@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { fetchCapturedPokemonsStart } from 'App/state/redux/pokemons/pokemons.actions';
 import PokemonsPage from './pokemons-page.component';
+import { fetchCapturedPokemons } from 'App/state/redux/pokemons/new.actions';
 
 const mapStateToProps = ({
   pokemons: { capturedPokemons, shouldCapturedPokemonsRefetch }
@@ -10,7 +10,7 @@ const mapStateToProps = ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPokemons: () => dispatch(fetchCapturedPokemonsStart())
+  fetchPokemons: () => dispatch(fetchCapturedPokemons())
 });
 
 const CapturedPokemonsPageHOC = connect(

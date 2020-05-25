@@ -1,5 +1,6 @@
 import { createReducer } from '@reduxjs/toolkit';
-import { fetchFreePokemonsStart, fetchFreePokemonsSuccess, fetchCapturedPokemonsStart, fetchCapturedPokemonsSuccess, fetchFreePokemonsFailure, fetchCapturedPokemonsFailure, fetchRandomPokemonAsync, fetchRandomPokemon, catchPokemon, setPokemonFree, setCurrentPokemon } from './pokemons.actions';
+import { setFreePokemons, setCapturedPokemons, setRandomPokemon, catchSingle, setSingleFree } from './new.actions';
+import { setCurrentPokemon } from './pokemons.actions';
 
 const INITIAL_STATE = {
   freePokemons: [],
@@ -13,46 +14,29 @@ const INITIAL_STATE = {
 };
 
 const pokemonsReducer = createReducer(INITIAL_STATE, {
-  [fetchFreePokemonsStart.type]: state => {
-    state.isFetching = true;
-  },
-  [fetchCapturedPokemonsStart.type]: state => {
-    state.isFetching = true;
-  },
-  [fetchFreePokemonsSuccess.type]: (state, action) => {
+  [setFreePokemons.type]: (state, action) => {
     state.isFetching = false;
     state.shouldFreePokemonsRefetch = false;
     state.freePokemons = action.payload.sort((a, b) => a.photoId - b.photoId);
     state.errorMessage = null;
   },
-  [fetchCapturedPokemonsSuccess.type]: (state, action) => {
+  [setCapturedPokemons.type]: (state, action) => {
     state.isFetching = false;
     state.shouldCapturedPokemonsRefetch = false;
     state.capturedPokemons = action.payload.sort((a, b) => a.photoId - b.photoId);
     state.errorMessage = null;
   },
-  [fetchFreePokemonsFailure.type]: (state, action) => {
-    state.isFetching = false;
-    state.errorMessage = action.payload;
-  },
-  [fetchCapturedPokemonsFailure.type]: (state, action) => {
-    state.isFetching = false;
-    state.errorMessage = action.payload;
-  },
-  [fetchRandomPokemonAsync.type]: state => {
-    state.isFetching = true;
-  },
-  [fetchRandomPokemon.type]: (state, action) => {
+  [setRandomPokemon.type]: (state, action) => {
     state.isFetching = false;
     state.randomPokemon = action.payload;
   },
-  [catchPokemon.type]: (state, action) => {
+  [catchSingle.type]: (state, action) => {
     state.freePokemons = state.freePokemons.filter(
                 pokemon => pokemon.name !== action.payload.name
               );
     state.shouldCapturedPokemonsRefetch = true;
   },
-  [setPokemonFree.type]: (state, action) => {
+  [setSingleFree.type]: (state, action) => {
     state.capturedPokemons = state.capturedPokemons.filter(
       pokemon => pokemon.name !== action.payload.name
     );

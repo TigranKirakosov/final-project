@@ -33,7 +33,7 @@ const PokemonsPage = ({
     if (shouldRefetch) {
       fetchPokemons();
     }
-  }, []);
+  }, [shouldRefetch, fetchPokemons]);
 
   const indexOfLastPokemon = currentPage * pokemonsPerPage;
 

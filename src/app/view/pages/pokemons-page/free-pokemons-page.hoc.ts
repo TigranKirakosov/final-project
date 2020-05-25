@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import { fetchFreePokemonsStart } from 'State/redux/pokemons/pokemons.actions';
 import PokemonsPage from './pokemons-page.component';
+import { fetchFreePokemons } from 'App/state/redux/pokemons/new.actions';
 
 const mapStateToProps = ({
   pokemons: { freePokemons, shouldFreePokemonsRefetch }
@@ -10,7 +10,7 @@ const mapStateToProps = ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchPokemons: () => dispatch(fetchFreePokemonsStart())
+  fetchPokemons: () => dispatch(fetchFreePokemons())
 });
 
 const FreePokemonsPageHOC = connect(

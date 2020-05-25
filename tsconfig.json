@@ -18,8 +18,9 @@
             "View/*": ["src/app/view/*"],
             "Common/*": ["src/common/*"],
             "Sass/*": ["src/sass/*"]
-        }
+        },
+        "resolveJsonModule": true
     },
     "exclude": ["node_modules"],
-    "include": ["src/index.d.ts"]
+    "include": ["./src/**/*", "src/declarations.d.ts"]
 }
